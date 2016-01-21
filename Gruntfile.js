@@ -345,11 +345,12 @@ module.exports = function (grunt) {
             'styles/fonts/{,*/}*.*'
           ]
         }, {
-          expand: true,
-          dot: true,
-          cwd: '.',
-          src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
-          dest: '<%= config.dist %>'
+          expand: true,     // to allow other options to work
+          dot: true,    // match files starting with a dot
+          cwd: '.',   // all sources r relative to this path
+          flatten: true,    // remove all parts of path
+          src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',      // from
+          dest: '<%= config.dist %>/styles/fonts/'    // to, changed so bootstrap fonts work :D Ilearned something new >_<
         }]
       }
     },

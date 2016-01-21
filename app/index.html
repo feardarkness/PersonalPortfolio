@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Ariel Alvarado</title>
-    <meta name="description" content="">
+    <meta name="description" content="Potafolio Personal de Ariel Alvarado. Diseño de Sitios Web.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="/favicon.ico">
@@ -44,7 +44,7 @@
             <li class="active"><a href="#inicio-aa">Inicio</a></li>
             <li><a href="#acercade-aa">Acerca de mi</a></li>
             <li><a href="#proyectos-aa">Portafolio</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#contacto-aa">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -52,7 +52,7 @@
     <div class="jumbotron" id="inicio-aa">
       <div class="container">
         <br><br><br><br>
-        <h1>Ariel Alvarado</h1>
+        <h1 id="name-visible">Ariel Alvarado</h1>
         <!--h3>Piensa fuera de la caja, desarrolla para ella.</h3-->
         <h3>Desarrollador Web</h3>
         <br><br><br>
@@ -68,24 +68,63 @@
       </div>
     </div>
     <div class="container">
-      <div class="row" id="acercade-aa">
+      <hr class="content-separator">
+      <div class="row"  id="acercade-aa">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" id="about-me">
+          <h3 id="acercade-visible">Acerca de mi: </h3>
+          <p><img id="foto" class="image-responsive img-circle" alt="Imagen de Ariel Alvarado" src="/images/yo_cabeza_real.png">Desarrollador Web ubicado en Bolivia, siempre aprendiendo y mejorando. Me encantan los retos, y mientras más complicado sea, mejor aún, la ideá de utilizar tecnología para resolver problemas es lo que más me apasiona.</p>        
+          <p>Conocimientos en lenguajes de programación PHP, Python, Java y JavaScript; Bases de datos Oracle, MySql 
+          y PostgreSQL; Frameworks como Angular (Javascript), ADF (Java), Zend Framework (PHP) y Django (Python); maquetado de Sitios Web (HTML y CSS)</p>
+          <p>Experiencia en Desarrollo Ágil y con herramientas de versionamiento (Git, SVN).</p>
+          <p>Cualquier consulta, no dudes en <a href="#contacto-aa">contactarme</a>, incluso las críticas son bien recibidas.</p>
+        </div>
+        <div class="col-md-1"></div>        
+      </div>
+      <hr class="content-separator">
+      <div class="row" id="proyectos-aa">
+        <div class="col-sm-12 col-md-12"><h3 id="proyectos-visible">Algunos ejemplos de mi trabajo: </h3></div>        
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
+          <div class="caption">Alguna descripcion del thumbnail</div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
+          <div class="caption">Alguna descripcion del thumbnail</div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
+          <div class="caption">Alguna descripcion del thumbnail</div>
+        </div>   
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
+          <div class="caption">Alguna descripcion del thumbnail</div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
+          <div class="caption">Alguna descripcion del thumbnail</div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
+          <div class="caption">Alguna descripcion del thumbnail</div>
+        </div>      
+      </div>
+      <hr class="content-separator">
+      <div class="row" id="contacto-aa">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-          <p>Acerca de mi: </p>
-          <p>Desarrollador Web apasionado por las nuevas tecnologías, siempre aprendiendo y mejorando. Conocimiento en tecnologías
-          Web del cliente y servidor</p>        
+          <h3 id="contacto-visible">Contactos: </h3>
+          <h4 class="text-center">main@arielalvarado.com</h4>
+          <p>Dudas, preguntas, críticas, todo es bien recibido, no olvides pasar a saludar. Si tienes algun proyecto en mente no temas 
+          informar tus tiempos y tu presupuesto, si no recibes una respuesta rápido, probablemente estoy en la mitad de la nada y sin cobertura, pero respondere tan pronto com pueda.</p>
         </div>
-        <div class="col-md-2"></div>        
+        <div class="col-md-2"></div>      
       </div>
-      <div class="row" id="proyectos-aa">
-        <div class="col-md-4">img1</div>
-        <div class="col-md-4">img2</div>
-        <div class="col-md-4">img3</div>        
-      </div>
+      <hr class="content-separator">
     </div>
     <div id="footer bg-">
       <div class="container">
-        <p>Example courtesy</p>
+        <p class="text-center">&copy; 2016</p>
       </div>
     </div>
 
@@ -121,12 +160,13 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47889299-2', 'auto');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>
