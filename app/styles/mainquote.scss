@@ -2,19 +2,19 @@ $icon-font-path: "fonts";
 $fa-font-path: "fonts";
 
 $body-bg: #fcfcfc;
-$header-font: capture_itregular, sans-serif;
-$primary-header-font-color: #f7f7f7;
-$secondary-header-font-color: #f0f0f0;
-$dark-secondary-header-font-color: #cfcfcf;
+$h1-font: capture_itregular, sans-serif;
+$font-color: #121212;
+
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
-html {
-  //background: url(../images/bg.jpg) no-repeat center center fixed;
+body {
+  background-image: url("../images/ocean-336613_1920.jpg");
   background-size: cover;
+  color: $font-color;
 }
 
 @font-face {
@@ -47,6 +47,10 @@ hr.content-separator{
   //padding: 0px 10px 0px 0px;
 }
 
+#quote-container{
+  display: none;
+}
+
 /* Sticky footer >_<*/
 html,
 body {
@@ -55,24 +59,14 @@ body {
   /* The html and body elements cannot have any padding or margin. */
 }
 
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
-
 /* Set the fixed height of the footer here */
 #footer {
-  height: 60px;
+  height: 20px;
   background-color: #f5f5f5;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-
-/* End of Sticky footer */
-
 
 .browsehappy {
   margin: 0.2em 0;
@@ -80,8 +74,6 @@ body {
   color: #000;
   padding: 0.2em 0;
 }
-
-
 
 /* Space out content a bit */
 body {
@@ -119,42 +111,6 @@ body {
 
 .container-narrow > hr {
   margin: 30px 0;
-}
-
-
-/* Main marketing message and sign up button */
-#inicio-aa {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  background: url(../images/dramatic-sky-210776_1280.jpg) no-repeat center center fixed;
-  background-size: cover;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-  p, h3{
-    color: $secondary-header-font-color;
-  }
-  blockquote p, blockquote footer{
-    font-size: 14px;
-  }
-  footer{
-    color: $dark-secondary-header-font-color;
-  }
-  h1{
-    color: $primary-header-font-color;
-    font-family: $header-font;
-  }
-}
-
-@media screen 
-  and (max-width: 500px) {
-  .jumbotron footer{
-    color: #000;
-  }
-  .jumbotron p{
-    color: $secondary-header-font-color;
-  }
 }
 
 /* Supporting marketing content */
