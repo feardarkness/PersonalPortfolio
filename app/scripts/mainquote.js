@@ -12,7 +12,7 @@ function randomQuote(element){
 		$("#autor").html(data.quoteAuthor);
 		$("#autor").attr("title", data.quoteAuthor);
 		$("#quote-container").show();
-		createTwetterButton(data.quoteText, data.quoteAuthor);
+		createTwitterButton(data.quoteText, data.quoteAuthor);
 	}).fail(function(error) {
 		alert("Ha ocurrido un error, estamos trabajando en ello, por favor, espera unos minutos antes de volver a intentar");
 	}).always(function() {
@@ -20,7 +20,7 @@ function randomQuote(element){
 	});
 }
 
-function createTwetterButton(quoteText, author){
+function createTwitterButton(quoteText, author){
 	twttr.widgets.createShareButton(
 			  'http://arielalvarado.com/randomquote.html',
 			  document.getElementById('twitter-button'),
