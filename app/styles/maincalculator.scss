@@ -1,71 +1,34 @@
 $icon-font-path: "fonts";
 $fa-font-path: "fonts";
 
-$body-bg: #fcfcfc;
-$h1-font: capture_itregular, sans-serif;
-$font-color: #121212;
-
-
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
-body {
-  background-image: url("../images/ocean-336613_1920.jpg");
-  background-size: cover;
-  color: $font-color;
-}
-
 @font-face {
-    font-family: 'capture_itregular';
-    src: url('fonts/Capture_it-webfont.eot');
-    src: url('fonts/Capture_it-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Capture_it-webfont.woff') format('woff'),
-         url('fonts/Capture_it-webfont.ttf') format('truetype'),
-         url('fonts/Capture_it-webfont.svg#capture_itregular') format('svg');
+    font-family: 'radiolandregular';
+    src: url('fonts/RADIOLAND-webfont.eot');
+    src: url('fonts/RADIOLAND-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/RADIOLAND-webfont.woff') format('woff'),
+         url('fonts/RADIOLAND-webfont.ttf') format('truetype'),
+         url('fonts/RADIOLAND-webfont.svg#radiolandregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-#about-me{
-  font-size: 16px; 
-}
-
-hr.content-separator{
-  border: 0;
-  height: 3px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(143, 67, 50, 0.75), rgba(0, 0, 0, 0));
-
-}
-
-#foto{
-  min-width: 100px; 
-  max-width: 200px; 
-  float: left;  
-  margin: 0px 10px 0px 0px;
-  //padding: 0px 10px 0px 0px;
-}
-
-#quote-container{
-  display: none;
-}
-
-/* Sticky footer >_<*/
-html,
-body {
-  height: 100%;
+body{  
   font-family: $font-family-serif;
-  /* The html and body elements cannot have any padding or margin. */
+  background-color: #FFBBB2;
 }
 
 /* Set the fixed height of the footer here */
 #footer {
   height: 20px;
-  background-color: #f5f5f5;
+  background-color: #EF8C7F;
   position: fixed;
   bottom: 0;
   width: 100%;
+  color: #070707;
 }
 
 .browsehappy {
@@ -73,12 +36,6 @@ body {
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
-}
-
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -89,36 +46,8 @@ body {
   padding-right: 15px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
 .container-narrow > hr {
   margin: 30px 0;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
 }
 
 /* Responsive: Portrait tablets and up */
@@ -145,3 +74,52 @@ body {
     border-bottom: 0;
   }
 }
+/*
+@media screen
+  and ((min-width: 500px)){
+  .calc-skin{
+    width: 100%;
+  }          
+}
+*/
+.calc-skin{
+  background-color: #A7682B;  
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px 0px 0px 0px;
+  box-shadow: 3px 3px #7D440C;
+  .calc-name{
+    color: #fafafa;
+    padding: 5px 0px 10px 0px;
+  }
+  .calc-button{
+    font-size: 20px;
+    background-color: #EFB77F;
+    margin: 5px;
+    width: 22%;
+    display: block;
+    position: relative;
+    float: left;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 3px 3px #7D440C;
+  }
+  .calc-button:hover{
+    background-color: #FFD8B2;
+    cursor: pointer;
+
+  }
+  .calc-screen{
+    font-family: radiolandregular;
+    font-size: 40px;
+    border-radius: 10px;
+    height: 70px;
+    background-color: #fafafa;    
+    margin: 0px 5px 10px 5px;
+    padding: 15px 5px 5px 5px;
+    text-align: right;
+  }
+}
+
