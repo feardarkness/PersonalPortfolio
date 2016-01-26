@@ -1,3 +1,7 @@
+$(".calc-button").on("click", function (element) {
+	 
+});
+
 function esSuma(tecla){
 	if (tecla == "+"){
 		return true;

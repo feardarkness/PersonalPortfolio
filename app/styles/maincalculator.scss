@@ -19,17 +19,17 @@ $fa-font-path: "fonts";
 
 body{  
   font-family: $font-family-serif;
-  background-color: #FFBBB2;
+  background-color: #D9E5D9;
 }
 
 /* Set the fixed height of the footer here */
 #footer {
   height: 20px;
-  background-color: #EF8C7F;
+  background-color: #5C9560;
+  color: #D9E5D9;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  color: #070707;
+  width: 100%;  
 }
 
 .browsehappy {
@@ -84,18 +84,19 @@ body{
 }
 */
 .calc-skin{
-  background-color: #A7682B;  
+  color: #CDD0D7;
+  background-color: #747E96;  
   padding: 5px;
   border-radius: 10px;
   margin: 10px 0px 0px 0px;
-  box-shadow: 3px 3px #7D440C;
+  box-shadow: 2px 2px #374467;
   .calc-name{
-    color: #fafafa;
     padding: 5px 0px 10px 0px;
   }
   .calc-button{
     font-size: 20px;
-    background-color: #EFB77F;
+    background-color: #374467;
+    color: #CDD0D7;
     margin: 5px;
     width: 22%;
     display: block;
@@ -105,19 +106,21 @@ body{
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
-    box-shadow: 3px 3px #7D440C;
+    box-shadow: 2px 2px #9AA1B1;
   }
   .calc-button:hover{
-    background-color: #FFD8B2;
+    background-color: #AFCCB1;
+    color: #5C9560;
     cursor: pointer;
 
   }
   .calc-screen{
+    background-color: #FFFEFE;   
+    color: #374467;
     font-family: radiolandregular;
     font-size: 40px;
     border-radius: 10px;
-    height: 70px;
-    background-color: #fafafa;    
+    height: 70px;    
     margin: 0px 5px 10px 5px;
     padding: 15px 5px 5px 5px;
     text-align: right;
