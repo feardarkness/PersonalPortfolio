@@ -19,7 +19,8 @@ $fa-font-path: "fonts";
 
 body{  
   font-family: $font-family-serif;
-  background-color: #D9E5D9;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* Set the fixed height of the footer here */
@@ -74,4 +75,80 @@ body{
   .jumbotron {
     border-bottom: 0;
   }
+}
+/*
+vw unit
+    Equal to 1% of the width of the initial containing block.
+    In the example below, if the width of the viewport is 200mm, the font size of h1 elements will be 16mm (i.e. (8×200mm)/100).
+vh unit
+    Equal to 1% of the height of the initial containing block. 
+vmin unit
+    Equal to the smaller of vw or vh. 
+vmax unit
+    Equal to the larger of vw or vh. 
+#circle{
+  width: 55vmin;      // el menor del viewport
+  height: 55vmin;  
+  border-radius: 50vmin;        
+  background-color: rgba(0, 0, 0, .1);
+  #inner-circle{     
+    border: 10px solid green;    
+    top: 50%;     
+    left: 50%;
+    margin: 0 auto;
+    width: 50vmin;      // el menor del viewport
+    height: 50vmin;  
+    border-radius: 50vmin;  
+    background-color: rgba(179, 51, 51, .5);
+    //background: linear-gradient( 0deg, green, 90%, green, 91%, #000000, 95%, #000000);  
+  }
+}
+*/
+
+#circle{    
+  margin: 0 auto;
+  width: 55vmin;      // el menor del viewport
+  height: 55vmin; 
+  background-color: #00FF22;  
+  padding: .5vmin;  
+  border-radius: 50%;
+}
+
+#inner-circle{
+  width: 54vmin;      // el menor del viewport
+  height: 54vmin; 
+  background-color: black;
+  padding: .5vmin;  
+  border-radius: 50%;
+}
+
+#inner-inner-circle{
+  width: 53vmin;      // el menor del viewport
+  height: 53vmin; 
+  background-color: #00FF22;
+  border-radius: 50%;
+  background: -webkit-linear-gradient( 0deg, #00FF22, 0%, #00FF22, 0%, #000000, 0%, #000000);
+  background: -moz-linear-gradient( 0deg, #00FF22, 0%, #00FF22, 0%, #000000, 0%, #000000);
+  background: -ms-linear-gradient( 0deg, #00FF22, 0%, #00FF22, 0%, #000000, 0%, #000000);
+  background: -o-linear-gradient( 0deg, #00FF22, 0%, #00FF22, 0%, #000000, 0%, #000000);
+  background: linear-gradient( 0deg, #00FF22, 0%, #00FF22, 0%, #000000, 0%, #000000);
+}
+
+@media (max-width: 600px){
+  #circle{    
+    width: 100vmin;      // el menor del viewport
+    height: 100vmin;     
+    padding: 0.5vmin;  
+    border-radius: 50%;
+  }
+
+  #inner-circle{
+    width: 99vmin;      // el menor del viewport
+    height: 99vmin;     
+  }    
+
+  #inner-inner-circle{
+    width: 98vmin;      // el menor del viewport
+    height: 98vmin;     
+  }    
 }
