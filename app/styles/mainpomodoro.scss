@@ -132,6 +132,13 @@ vmax unit
   background: -ms-linear-gradient( 0deg, #00FF22, 0%, #00FF22, 0%, #000000, 0%, #000000);
   background: -o-linear-gradient( 0deg, #00FF22, 0%, #00FF22, 0%, #000000, 0%, #000000);
   background: linear-gradient( 0deg, #00FF22, 0%, #00FF22, 0%, #000000, 0%, #000000);
+  #wi{      
+      margin: -20px 0px 0px 0px;
+      width: 100%;
+      h3{
+        font-size: 5vmin;
+      }
+  }
 }
 
 @media (max-width: 600px){
@@ -144,7 +151,7 @@ vmax unit
 
   #inner-circle{
     width: 99vmin;      // el menor del viewport
-    height: 99vmin;     
+    height: 99vmin;         
   }    
 
   #inner-inner-circle{

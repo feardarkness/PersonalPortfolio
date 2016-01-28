@@ -1,8 +1,8 @@
-var debeCorrer = false,
+var mustRun = false,
 	percentage = 0;
 $("#inner-inner-circle").on("click", function(){
-	debeCorrer = !debeCorrer;
-	if (debeCorrer){
+	mustRun = !mustRun;
+	if (mustRun){
 		run();
 	}
 });
