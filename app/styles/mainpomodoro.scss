@@ -1,5 +1,7 @@
 $icon-font-path: "fonts";
 $fa-font-path: "fonts";
+$background: #010101;
+$border-radius: #1DCC34;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
@@ -19,7 +21,7 @@ $fa-font-path: "fonts";
 
 body{  
   font-family: $font-family-serif;
-  background-color: #000000;
+  background-color: $background;
   color: #ffffff;
 }
 
@@ -105,6 +107,9 @@ vmax unit
 }
 */
 
+
+/*
+this one works but i dont like it
 #circle{    
   margin: 0 auto;
   width: 55vmin;      // el menor del viewport
@@ -158,4 +163,28 @@ vmax unit
     width: 98vmin;      // el menor del viewport
     height: 98vmin;     
   }    
+}
+*/
+
+#circle{
+  background-color: $border-radius;    
+  padding: 5px;
+  border-radius: 50%;
+  width: 100%;
+}
+
+#inner-circle{    
+  padding: 100% 0% 0% 0%;
+  width: 100%;  
+  background-color: $background;
+  border-radius: 50%;
+}
+
+#floating-text{
+  font-size: 5vmin;
+  padding: 20% 0% 0% 0%;
+  margin: 0;
+  position: absolute;  
+  width: 90%;
+  text-align: center;  
 }

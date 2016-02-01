@@ -1,15 +1,19 @@
+$(".text-fit").fitText();
+
 var mustRun = false,
 	percentage = 0,
 	breakTime = 5,
 	workTime = 25,
 	elapsedTime = -1,
 	breakOrWork = "work",
-	workColor = "#00FF22",
+	workColor = "#1DCC34",
 	breakColor = "#D61B1B",
 	color = workColor,
-	interval = undefined;
+	interval = undefined,
+	circleId = "#inner-circle", 
+	textId = "#floating-text";
 
-$("#inner-inner-circle").on("click", function(){
+$(circleId + ", "+textId).on("click", function(){
 	mustRun = !mustRun;
 	if (mustRun){
 		workTime = convertMinutesToSeconds($("#work-time").html());
@@ -62,7 +66,7 @@ function doIt(percentage, color){
 	var first = percentage,
 		second = percentage + 1,
 		third = percentage + 2;
-	$("#inner-inner-circle").css({
+	$(circleId).css({
 		background: "-webkit-linear-gradient( 0deg, "+color+", "+first+"%, "+color+", "+second+"%, #000000, "+third+"%, #000000)",
 		background: "-moz-linear-gradient( 0deg, "+color+", "+first+"%, "+color+", "+second+"%, #000000, "+third+"%, #000000)",
 		background: "-ms-linear-gradient( 0deg, "+color+", "+first+"%, "+color+", "+second+"%, #000000, "+third+"%, #000000)",
