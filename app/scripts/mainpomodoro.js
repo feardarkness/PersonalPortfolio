@@ -1,20 +1,4 @@
-$(".text-fit").fitText();
-
-$(".plus-minus").on('click', function(event) {
-	var $span = $(this).parent().children('.time-display').first(),
-		value = +$span.html();
-	if ( $(this).next().is('span') ){
-		if(value+1 <= 100){
-			$span.html(+$span.html() + 1);
-		}
-	}else{
-		if(value-1 >= 1){
-			$span.html(+$span.html() - 1);
-		}
-	}
-});
-
-var mustRun = false,
+var isRunning = false,
 	percentage = 0,
 	breakTime = 5,
 	workTime = 25,
@@ -27,9 +11,28 @@ var mustRun = false,
 	circleId = "#inner-circle", 
 	textId = "#floating-text";
 
+$(".text-fit").fitText();
+
+$(".plus-minus").on('click', function(event) {
+	if(!isRunning){
+		var $span = $(this).parent().children('.time-display').first(),
+			value = +$span.html();
+		if ( $(this).next().is('span') ){
+			if(value+1 <= 100){
+				$span.html(+$span.html() + 1);
+			}
+		}else{
+			if(value-1 >= 1){
+				$span.html(+$span.html() - 1);
+			}
+		}
+	}
+});
+
+
 $(circleId + ", "+textId).on("click", function(){
-	mustRun = !mustRun;
-	if (mustRun){
+	isRunning = !isRunning;
+	if (isRunning){
 		setWorkTime();
 		setBreakTime();
 		run();
