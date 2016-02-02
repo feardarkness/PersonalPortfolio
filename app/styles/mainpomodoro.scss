@@ -1,6 +1,6 @@
 $icon-font-path: "fonts";
 $fa-font-path: "fonts";
-$background: #010101;
+$background: #0f0f0f;
 $border-radius: #1DCC34;
 
 // bower:scss
@@ -178,13 +178,20 @@ this one works but i dont like it
   width: 100%;  
   background-color: $background;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #floating-text{
+  cursor: pointer;
   font-size: 5vmin;
   padding: 20% 0% 0% 0%;
   margin: 0;
   position: absolute;  
   width: 90%;
   text-align: center;  
+}
+
+#break-time, #work-time{
+  font-size: 20px;
+  margin: 0px 10px;
 }

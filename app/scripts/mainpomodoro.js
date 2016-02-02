@@ -1,5 +1,19 @@
 $(".text-fit").fitText();
 
+$(".plus-minus").on('click', function(event) {
+	var $span = $(this).parent().children('.time-display').first(),
+		value = +$span.html();
+	if ( $(this).next().is('span') ){
+		if(value+1 <= 100){
+			$span.html(+$span.html() + 1);
+		}
+	}else{
+		if(value-1 >= 1){
+			$span.html(+$span.html() - 1);
+		}
+	}
+});
+
 var mustRun = false,
 	percentage = 0,
 	breakTime = 5,
@@ -16,14 +30,22 @@ var mustRun = false,
 $(circleId + ", "+textId).on("click", function(){
 	mustRun = !mustRun;
 	if (mustRun){
-		workTime = convertMinutesToSeconds($("#work-time").html());
-		breakTime = convertMinutesToSeconds($("#break-time").html());
+		setWorkTime();
+		setBreakTime();
 		run();
 	}else{
 		clearTimerInterval();
 		resetTimer();
 	}
 });
+
+function setWorkTime(){
+	workTime = convertMinutesToSeconds($("#work-time").html());
+}
+
+function setBreakTime(){
+	breakTime = convertMinutesToSeconds($("#break-time").html());
+}
 
 function resetTimer(){
 	elapsedTime = -1;
@@ -42,9 +64,11 @@ function getTotalTime(){
 
 function changeMoment(){
 	if (breakOrWork == "work"){
+		setWorkTime();
 		breakOrWork = "break";
 		color = breakColor;
 	}else{
+		setBreakTime();
 		breakOrWork = "work";
 		color = workColor;
 	}
@@ -79,15 +103,25 @@ function clearTimerInterval(){
 	window.clearInterval(interval);
 }
 
+function convertSecondsToMinutes(seconds){
+	var minutes = ("0" + (Math.floor(seconds/60))).slice(-2),
+		seconds = ("0" + (seconds % 60)).slice(-2);
+
+	return minutes + ":" +seconds;
+}
+
 function run(){
 	
 	interval = window.setInterval(function(){
 					var totalTime = getTotalTime();
 					elapsedTime = elapsedTime + 1;
-					if(elapsedTime > totalTime){
+					$("#current-time").html(convertSecondsToMinutes(totalTime - elapsedTime));
+					doIt(calculatePercentage(elapsedTime, totalTime), color);
+					if(elapsedTime + 1 > totalTime){
 						changeMoment();
-						resetTimer();
+						elapsedTime = -1;
+						//resetTimer();
 					}
-			  		doIt(calculatePercentage(elapsedTime, totalTime), color);
+			  		
 				}, 1000);
 }
