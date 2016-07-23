@@ -245,6 +245,7 @@ module.exports = function (grunt) {
       html: ['<%= config.app %>/index.html', 
             '<%= config.app %>/randomquote.html', 
             '<%= config.app %>/calculator.html',
+            '<%= config.app %>/mapa.html',
             '<%= config.app %>/pomodoro.html']
     },
 
