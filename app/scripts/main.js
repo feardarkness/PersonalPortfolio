@@ -52,6 +52,6 @@ $(window).resize(function(){
 	changeCardHeight();
 });
 
-$(".card-container").height();
-
 $(".flip-card").flip({trigger: 'hover', speed: 600});
+
+changeCardHeight();
