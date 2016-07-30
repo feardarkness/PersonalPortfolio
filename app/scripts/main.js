@@ -39,4 +39,19 @@ function isElementInViewport (el) {
 
 $(document).ready(function(){
 	setElementActiveIfVisible();
+	changeCardHeight();
 });
+
+function changeCardHeight(){
+	var height1 = +$(".flip-card .thumbnail").height();
+	var height2 = +$(".flip-card .caption").height();
+	$(".flip-card").height(height1 + height2 + 50);
+}
+
+$(window).resize(function(){
+	changeCardHeight();
+});
+
+$(".card-container").height();
+
+$(".flip-card").flip({trigger: 'hover', speed: 600});

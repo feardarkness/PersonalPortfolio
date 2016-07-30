@@ -32,16 +32,6 @@
 
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
-        <!--ul  class="nav navbar-nav collapse navbar-collapse">
-          <li class="active"><a>Ariel Alvarado</a></li>
-          <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sitios <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">blog</a></li>
-              <li><a href="#">Site 2</a></li>
-              <li><a href="#">Site 3</a></li>
-            </ul>
-          </li>
-        </ul-->
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#inicio-aa">Inicio</a></li>
@@ -80,36 +70,64 @@
           <p>Conocimientos en lenguajes de programación PHP, Python, Java y JavaScript; Bases de datos Oracle, MySql 
           y PostgreSQL; Frameworks como Angular (Javascript), ADF (Java), Zend Framework (PHP) y Django (Python); maquetado de Sitios Web (HTML y CSS)</p>
           <p>Experiencia en Desarrollo Ágil y con herramientas de versionamiento (Git, SVN).</p>
-          <p>Cualquier consulta, no dudes en <a href="#contacto-aa">contactarme</a>, incluso las críticas son bien recibidas.</p>
+          <p>Cualquier consulta, no dudes en <a href="#contacto-aa">contactarme</a>, las críticas son bien recibidas.</p>
         </div>
         <div class="col-md-1"></div>        
       </div>
       <hr class="content-separator">
       <div class="row" id="proyectos-aa">
-        <div class="col-sm-12 col-md-12"><h3 id="proyectos-visible">Algunos ejemplos de mi trabajo: </h3></div>        
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
-          <div class="caption">Alguna descripcion del thumbnail</div>
+        <div class="col-sm-12 col-md-12"><h3 id="proyectos-visible">Algunas páginas de prueba: </h3></div>        
+        <div class="col-sm-6 col-md-4 card-container">
+          <div class="flip-card">
+            <div  class="front">
+              <div class="thumbnail">
+                <a href="/pomodoro.html"><img alt="thumbnail alt" src="images/pomodoro.png" /></a>
+              </div>    
+              <div class="caption">Reloj para administrar el tiempo con la técnica Pomodoro</div>
+            </div>
+            <div  class="back">
+              Pomodoro es un método para administrar el tiempo creado por Francesco Cirillo. Se utiliza un reloj para dividir el trabajo en intervalos lo cuál te permite ser más productivo. Estos intervalos se denominan pomodoros.
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
-          <div class="caption">Alguna descripcion del thumbnail</div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
-          <div class="caption">Alguna descripcion del thumbnail</div>
+        <div class="col-sm-6 col-md-4 card-container">
+          <div class="flip-card">
+            <div  class="front">
+              <div class="thumbnail">
+                <a href="/mapa.html"><img alt="thumbnail alt" src="images/mapa.png" /></a>
+              </div>
+              <div class="caption">Prueba de generación de mapa con leaflet y geojson</div>
+            </div>
+            <div  class="back">
+              Prueba de la creación de un mapa con leafletjs, realizando la creación de los departamentos dinámicamente con datos geojson. Además cada departamento se ilumina cuando se pasa el mouse por encima.
+            </div>
+          </div>
         </div>   
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
-          <div class="caption">Alguna descripcion del thumbnail</div>
+        <div class="col-sm-6 col-md-4 card-container">
+          <div class="flip-card">
+            <div  class="front">
+              <div class="thumbnail">
+                <a href="/calculator.html"><img alt="thumbnail alt" src="images/calculadora.png" /></a>
+              </div>
+              <div class="caption">Calculadora hecha solamente con css y javascript</div>
+            </div>
+            <div  class="back">
+              Prueba de la creación de una calculadora solamente con javascript. Se pueden realizar las cuato operaciones básicas. La calculadora se creo para cumplir con los requerimientos de Freecodecamp.
+            </div>
+          </div>          
         </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
-          <div class="caption">Alguna descripcion del thumbnail</div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail"><img alt="thumbnail alt" src="images/imagen1.png" /></div>
-          <div class="caption">Alguna descripcion del thumbnail</div>
+        <div class="col-sm-6 col-md-4 card-container">
+          <div class="flip-card">
+            <div  class="front">
+              <div class="thumbnail">
+                <a href="/randomquote.html"><img alt="thumbnail alt" src="images/quote.png" /></a>
+              </div>
+              <div class="caption">Generador de frases celebres con la posibilidad de twitear la frase</div>
+            </div>
+            <div  class="back">
+              Consumo de una API para generar frases celebres, además se agregó la funcionalidad que permite compartir por twitter la frase.
+            </div>
+          </div>          
         </div>      
       </div>
       <hr class="content-separator">
@@ -119,7 +137,7 @@
           <h3 id="contacto-visible">Contactos: </h3>
           <h4 class="text-center">alvarado.ariel.contact@gmail.com</h4>
           <p>Dudas, preguntas, críticas, todo es bien recibido, no olvides pasar a saludar. Si tienes algun proyecto en mente no temas 
-          informar tus tiempos y tu presupuesto, si no recibes una respuesta rápido, probablemente estoy en la mitad de la nada y sin cobertura, pero responderé tan pronto como pueda.</p>
+          informar tus tiempos y tu presupuesto, si no recibes una respuesta rápido, probablemente estoy en la mitad de la nada y sin cobertura, pero responderé tan pronto como pueda :)</p>
         </div>
         <div class="col-md-2"></div>      
       </div>
@@ -136,8 +154,9 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery/jquery.js"></script>
     <script src="/bower_components/FitText.js/jquery.fittext.js"></script>
+    <script src="/bower_components/flip/dist/jquery.flip.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
