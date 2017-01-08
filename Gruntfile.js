@@ -242,10 +242,11 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: ['<%= config.app %>/index.html', 
-            '<%= config.app %>/randomquote.html', 
+      html: ['<%= config.app %>/index.html',
+            '<%= config.app %>/randomquote.html',
             '<%= config.app %>/calculator.html',
             '<%= config.app %>/mapa.html',
+            '<%= config.app %>/love.html',
             '<%= config.app %>/pomodoro.html']
     },
 
